@@ -17,7 +17,7 @@ session_start();
          <input type="text" name="username" ><br>
          <label for="password">Enter password</label>
          <input type="password" name="password" ><br>
-         <input type="submit" value="Submit">
+         <input type="submit" name = "submit" value="Submit">
        
     </form>
 </body>
@@ -33,6 +33,8 @@ if(isset($_POST["submit"])){
 
             echo $_SESSION["username"];
             echo $_SESSION["password"];
+
+            header("Location:home.php");
         }
 }else{
     echo "No data there";
